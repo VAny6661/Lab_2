@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 public class SaveData {
-	private final static String DATA_XML = "sportsmans.xml";
+	private final static String DATA_XML = "vets.xml";
 	private static Document doc;
 
 	public static void saveSportsmans() {
@@ -41,7 +41,7 @@ public class SaveData {
 			StreamResult file = new StreamResult(new File(DATA_XML));
 			transformer.transform(source, file);
 
-			System.out.println("Создание XML файла закончено");
+			System.out.println("Г‘Г®Г§Г¤Г Г­ГЁГҐ XML ГґГ Г©Г«Г  Г§Г ГЄГ®Г­Г·ГҐГ­Г®");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -50,13 +50,13 @@ public class SaveData {
 	private static Node getVet(Vet vet) {
 		Element pet = doc.createElement("vet");
 
-		pet.appendChild(getElements(pet, "Фамилия врача", vet.getSurname()));
-		pet.appendChild(getElements(pet, "Имя врача", vet.getName()));
-		pet.appendChild(getElements(pet, "Отчество врача", vet.getMiddleName()));
-		pet.appendChild(getElements(pet, "Имя питомца", vet.getPetName()));
-		pet.appendChild(getElements(pet, "Дата рождения", vet.getBirthDate()));
-		pet.appendChild(getElements(pet, "Дата последнего приёма", vet.getLastVisitDate()));
-		pet.appendChild(getElements(pet, "Диагноз", vet.getDiagnosis()));
+		pet.appendChild(getElements(pet, "Г”Г Г¬ГЁГ«ГЁГї ГўГ°Г Г·Г ", vet.getSurname()));
+		pet.appendChild(getElements(pet, "Г€Г¬Гї ГўГ°Г Г·Г ", vet.getName()));
+		pet.appendChild(getElements(pet, "ГЋГІГ·ГҐГ±ГІГўГ® ГўГ°Г Г·Г ", vet.getMiddleName()));
+		pet.appendChild(getElements(pet, "Г€Г¬Гї ГЇГЁГІГ®Г¬Г¶Г ", vet.getPetName()));
+		pet.appendChild(getElements(pet, "Г„Г ГІГ  Г°Г®Г¦Г¤ГҐГ­ГЁГї", vet.getBirthDate()));
+		pet.appendChild(getElements(pet, "Г„Г ГІГ  ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЇГ°ГЁВёГ¬Г ", vet.getLastVisitDate()));
+		pet.appendChild(getElements(pet, "Г„ГЁГ ГЈГ­Г®Г§", vet.getDiagnosis()));
 		return pet;
 	}
 
