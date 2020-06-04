@@ -26,7 +26,7 @@ public class SaveData {
 		try {
 			builder = factory.newDocumentBuilder();
 			doc = builder.newDocument();
-			Element rootElement = doc.createElementNS("", "Sportsmans");
+			Element rootElement = doc.createElementNS("", "vets");
 			doc.appendChild(rootElement);
 
 			for (int i = 0; i < vets.size(); i++) {
