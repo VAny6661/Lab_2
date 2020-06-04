@@ -19,7 +19,7 @@ public class SaveData {
 	private final static String DATA_XML = "vets.xml";
 	private static Document doc;
 
-	public static void saveSportsmans() {
+	public static void saveVets() {
 		List<Vet> vets = DataHandler.getVets();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder;
