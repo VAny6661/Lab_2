@@ -24,7 +24,7 @@ public class LoadData {
 			Document doc = builder.parse(xmlFile);
 			doc.getDocumentElement().normalize();
 
-			NodeList nodeList = doc.getElementsByTagName("sportsman");
+			NodeList nodeList = doc.getElementsByTagName("Vet");
 			List<Vet> vets = new ArrayList<Vet>();
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				vets.add(getVet(nodeList.item(i)));
@@ -40,10 +40,10 @@ public class LoadData {
 	private static Vet getVet(Node node) {
 		if (node.getNodeType() == Node.ELEMENT_NODE) {
 			Element element = (Element) node;
-			Doctor doctor = new Doctor(getTagValue("Ôàìèëèÿ_âðà÷à", element), getTagValue("Èìÿ_âðà÷à", element),
-					getTagValue("Îò÷åñòâî_âðà÷à", element));
-			Vet vet = new Vet(doctor, getTagValue("Èìÿ_ïèòîìöà", element), getTagValue("Äàòà_ðîæäåíèÿ", element),
-					getTagValue("Äàòà_ïîñëåäíåãî_ïðè¸ìà", element),	getTagValue("Äèàãíîç", element));
+			Doctor doctor = new Doctor(getTagValue("Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿_Ã¢Ã°Ã Ã·Ã ", element), getTagValue("ÃˆÃ¬Ã¿_Ã¢Ã°Ã Ã·Ã ", element),
+					getTagValue("ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®_Ã¢Ã°Ã Ã·Ã ", element));
+			Vet vet = new Vet(doctor, getTagValue("ÃˆÃ¬Ã¿_Ã¯Ã¨Ã²Ã®Ã¬Ã¶Ã ", element), getTagValue("Ã„Ã Ã²Ã _Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿", element),
+					getTagValue("Ã„Ã Ã²Ã _Ã¯Ã®Ã±Ã«Ã¥Ã¤Ã­Ã¥Ã£Ã®_Ã¯Ã°Ã¨Â¸Ã¬Ã ", element),	getTagValue("Ã„Ã¨Ã Ã£Ã­Ã®Ã§", element));
 			return vet;
 		}
 
